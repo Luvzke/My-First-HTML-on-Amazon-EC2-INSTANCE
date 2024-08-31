@@ -1,270 +1,229 @@
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <title>Apache2 Ubuntu Default Page: It works</title>
     <style type="text/css" media="screen">
-  * {
-    margin:0;
-    padding:0;
-  }
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-  body, html {
-    padding:0;
-    background-color: #ffffff ;
-    font-family: Candara
-    font-size: 11pt;
-    text-align: Left;
-  }
+        body, html {
+            background-color: #ffffff;
+            font-family: Candara, sans-serif;
+            font-size: 11pt;
+            text-align: left;
+        }
 
-  div.main_page {
-    position: relative;
-    display: table;
+        .main_page {
+            position: relative;
+            display: table;
+            width: 850px;
+            margin: 0 auto;
+            padding: 0;
+            border: 0 solid #000000;
+            background-color: #400404;
+            text-align: left;
+        }
 
-    width: 850px;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px 0px 0px 0px;
+        .page_header {
+            height: 180px;
+            width: 100%;
+            background-color: #400404;
+        }
 
-    border-width: 0px;
-    border-color: #000000;
-    border-style: solid;
-    background-color: #400404;
-    text-align: Left;
-  }
+        .page_header span {
+            margin: 3px 50px;
+            color: #FFFFFF;
+            font-size: 170%;
+            font-weight: bold;
+        }
 
-  div.page_header {
-    height: 180px;
-    width: 100%;
+        .page_header img {
+            margin: 0 10px 0 0;
+            border: 0;
+        }
 
-    background-color:  #400404;
-  }
+        .banner {
+            padding: 9px 6px;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 100%;
+            text-align: center;
+            position: absolute;
+            left: 26%;
+            bottom: 80px;
+            width: 49%;
+        }
 
-  div.page_header span {
-    margin: 3px 3px 3px 50px;
-    color: #FFFFFF;
-    font-size: 170%;
-    font-weight: bold;
-  }
+        .table_of_contents {
+            clear: left;
+            min-width: 200px;
+            margin: 3px;
+            background-color: #000000;
+            text-align: left;
+        }
 
-  div.page_header img {
-    margin: 0px 10px 0px 0px;
+        .table_of_contents_item {
+            clear: left;
+            width: 100%;
+            margin: 0;
+            background-color: #ffffff;
+            color: #000000;
+            text-align: left;
+        }
 
-    border:0;
-  }
+        .table_of_contents_item a {
+            margin: 6px 0 0 6px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
 
-  div.banner {
-    padding: 9px 6px 9px 6px;
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 100%;
-    text-align: Center;
-    position: absolute;
-    left: 26%;
-    bottom: 80px;
-    width: 49%;
-  }
+        .table_of_contents_item a:hover {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
 
-  div.table_of_contents {
-    clear: left;
-    min-width: 200px;
-    margin: 3px 3px 3px 3px;
-    background-color: #000000;
-    text-align: left;
-  }
+        .content_section {
+            margin: 3px;
+            background-color: #FFFFFF;
+            text-align: left;
+        }
 
-  div.table_of_contents_item { clear: left;
+        .content_section_text {
+            padding: 4px 8px;
+            color: #000000;
+            font-size: 100%;
+        }
 
-    width: 100%;
-    margin:0;
-    background-color:#ffffff ;
-    color: #000000;
-    text-align: left;
-  }
+        .content_section_text pre {
+            margin: 8px 0;
+            padding: 8px;
+            border: 1px dotted #000000;
+            background-color: #F5F6F7;
+            font-style: italic;
+        }
 
-  div.table_of_contents_item a {
-    margin: 6px 0px 0px 6px;
-  }
+        .content_section_text p {
+            margin-bottom: 8px;
+        }
 
-  div.content_section {
-    margin: 3px 3px 3px 3px;
+        .content_section_text ul, .content_section_text li {
+            padding: 4px 8px 4px 16px;
+        }
 
-    background-color: #FFFFFF;
-    text-align: Left;
-  }
+        .section_header {
+            padding: 1px 0 0 6px;
+            background-color: #450105;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 112%;
+            text-align: center;
+        }
 
-  div.content_section_text {
-    padding: 4px 8px 4px 8px;
+        .section_header_grey {
+            background-color: #9F9386;
+        }
 
-    color: #000000 ;
-    font-size: 100%;
-  }
+        .floating_element {
+            position: relative;
+            float: left;
+        }
 
-  div.content_section_text pre {
-    margin: 8px 0px 8px 0px;
-    padding: 8px 8px 8px 8px;
-    border-width: 1px;
-    border-style: dotted;
-    border-color: #000000;
+        .content_section_text a {
+            background-color: #DCDFE6;
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    background-color: #F5F6F7;
-    font-style: Italic;
-  }
+        .content_section_text a:hover {
+            background-color: #000000;
+            color: #DCDFE6;
+        }
 
-  div.content_section_text p {
-    margin-bottom: 8px;
-  }
-
-  div.content_section_text ul, div.content_section_text li {
-    padding: 4px 8px 4px 16px;
-  }
-
-  div.section_header {
-    padding:1px 0px 0px 6px;
-    background-color: #450105;
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 112%;
-    text-align: center;
-  }
-
-  div.section_header_grey {
-    background-color: #9F9386;
-  }
-
-  .floating_element {
-    position: relative;
-    float: left;
-  }
-
-  div.table_of_contents_item a,
-  div.content_section_text a {
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  div.table_of_contents_item a:link,
-  div.table_of_contents_item a:visited,
-  div.table_of_contents_item a:active {
-    color: #FFFFFF;
-  }
-
-  div.table_of_contents_item a:hover {
-    background-color: #000000;
-
-    color: #FFFFFF;
-  }
-
-  div.content_section_text a:link,
-  div.content_section_text a:visited,
-   div.content_section_text a:active {
-    background-color: #DCDFE6;
-
-    color: #000000;
-  }
-
-  div.content_section_text a:hover {
-    background-color: #000000;
-
-    color: #DCDFE6;
-  }
-
-  div.validator {
-  }
-  body {
-background-image: linear-gradient(45deg, rgb(134, 134, 134),rgb(96, 96, 96)),linear-gradient(67.5deg, rgb(27, 68, 36) 0%, rgb(27, 68, 36) 4%,rgb(67, 79, 52) 4%, rgb(67, 79, 52) 20%,rgb(107, 91, 68)>
+        body {
+            background-image: linear-gradient(237deg, rgba(213, 213, 213, 0.01) 0%, rgba(213, 213, 213, 0.01) 14.286%,rgba(140, 140, 140, 0.01) 14.286%, rgba(140, 140, 140, 0.01) 28.572%,rgba(52, 52, 52, 0.01) 28.572%, rgba(52, 52, 52, 0.01) 42.858%,rgba(38, 38, 38, 0.01) 42.858%, rgba(38, 38, 38, 0.01) 57.144%,rgba(159, 159, 159, 0.01) 57.144%, rgba(159, 159, 159, 0.01) 71.42999999999999%,rgba(71, 71, 71, 0.01) 71.43%, rgba(71, 71, 71, 0.01) 85.71600000000001%,rgba(88, 88, 88, 0.01) 85.716%, rgba(88, 88, 88, 0.01) 100.002%),linear-gradient(374deg, rgba(25, 25, 25, 0.01) 0%, rgba(25, 25, 25, 0.01) 12.5%,rgba(150, 150, 150, 0.01) 12.5%, rgba(150, 150, 150, 0.01) 25%,rgba(84, 84, 84, 0.01) 25%, rgba(84, 84, 84, 0.01) 37.5%,rgba(85, 85, 85, 0.01) 37.5%, rgba(85, 85, 85, 0.01) 50%,rgba(188, 188, 188, 0.01) 50%, rgba(188, 188, 188, 0.01) 62.5%,rgba(80, 80, 80, 0.01) 62.5%, rgba(80, 80, 80, 0.01) 75%,rgba(73, 73, 73, 0.01) 75%, rgba(73, 73, 73, 0.01) 87.5%,rgba(219, 219, 219, 0.01) 87.5%, rgba(219, 219, 219, 0.01) 100%),linear-gradient(240deg, rgba(233, 233, 233, 0.01) 0%, rgba(233, 233, 233, 0.01) 25%,rgba(114, 114, 114, 0.01) 25%, rgba(114, 114, 114, 0.01) 50%,rgba(164, 164, 164, 0.01) 50%, rgba(164, 164, 164, 0.01) 75%,rgba(228, 228, 228, 0.01) 75%, rgba(228, 228, 228, 0.01) 100%),linear-gradient(354deg, rgba(255,0,0, 0.02) 0%, rgba(255,0,0, 0.02) 16.667%,rgba(255,0,0, 0.02) 16.667%, rgba(255,0,0, 0.02) 33.334%,rgba(255,0,0, 0.02) 33.334%, rgba(255,0,0, 0.02) 50.001000000000005%,rgba(255,0,0, 0.02) 50.001%, rgba(255,0,0, 0.02) 66.668%,rgba(255,0,0, 0.02) 66.668%, rgba(255,0,0, 0.02) 83.33500000000001%,rgba(21, 21, 21, 0.02) 83.335%, rgba(21, 21, 21, 0.02) 100.002%),linear-gradient(365deg, rgba(255,0,0, 0.03) 0%, rgba(255,0,0, 0.03) 12.5%,rgba(255,0,0, 0.03) 12.5%, rgba(255,0,0, 0.03) 25%,rgba(255,0,0, 0.03) 25%, rgba(255,0,0, 0.03) 37.5%,rgba(255,0,0, 0.03) 37.5%, rgba(255,0,0, 0.03) 50%,rgba(255,0,0, 0.03) 50%, rgba(255,0,0, 0.03) 62.5%,rgba(0,0,0, 0.03) 62.5%, rgba(0,0,0, 0.03) 75%,rgba(255,2,2, 0.03) 75%, rgba(255,2,2, 0.03) 87.5%,rgba(198, 198, 198, 0.03) 87.5%, rgba(198, 198, 198, 0.03) 100%),linear-gradient(134deg, rgba(195, 195, 195, 0.03) 0%, rgba(195, 195, 195, 0.03) 16.667%,rgba(228,0,0, 0.03) 16.667%, rgba(228,0,0, 0.03) 33.334%,rgba(170, 170, 170, 0.03) 33.334%, rgba(170, 170, 170, 0.03) 50.001000000000005%,rgba(158, 158, 158, 0.03) 50.001%, rgba(158, 158, 158, 0.03) 66.668%,rgba(121, 121, 121, 0.03) 66.668%, rgba(121, 121, 121, 0.03) 83.33500000000001%,rgba(222,25,25, 0.03) 83.335%, rgba(222,25,25, 0.03) 100.002%),linear-gradient(305deg, rgba(234,17,17, 0.03) 0%, rgba(234,17,17, 0.03) 25%,rgba(220,26,26, 0.03) 25%, rgba(220,26,26, 0.03) 50%,rgba(238,0,0, 0.12) 50%, rgba(238,0,0, 0.12) 75%,rgba(227, 227, 227, 0.03) 75%, rgba(227, 227, 227, 0.03) 100%),linear-gradient(127deg, rgb(0,0,0),rgb(0,0,0));
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="main_page">
-      <div class="page_header floating_element">
-        <img src="https://i.pinimg.com/736x/7a/de/04/7ade04ef9bafef376d7cb6fa4bf0657d.jpg"
-             style="width:244px;height:177px;" class="floating_element" />
-        <div>
-          <span style="margin-top: 1.5em;" class="floating_element">
-            Civic Type R: 1999
-          </span>
+        <div class="page_header floating_element">
+            <img src="https://i.pinimg.com/736x/7a/de/04/7ade04ef9bafef376d7cb6fa4bf0657d.jpg" style="width:244px;height:177px;" class="floating_element" />
+            <div>
+                <span style="margin-top: 1.5em;" class="floating_element">Civic Type R: 1999</span>
+            </div>
+            <div class="banner">
+                <div id="about"></div>
+                Meu Primeiro Web Server
+            </div>
         </div>
-         <div class="banner">
-          <div id="about"></div>
-          Meu Primeiro Web Server
-         </div>
+        <div class="content_section floating_element">
+            <div class="content_section_text">
+                <p>
+                    <b>O primeiro Civic Type R nasce em 1997, na sexta geração do modelo. Exclusivo
+                    para o Japão, era um hatch de 3 portas e chamou a atenção pela redução de
+                    peso conseguida pela Type R, de 1.143 kg para 1.050 kg e por uma importante
+                    mudança estrutural. Na produção, a soldagem contínua, não em pontos, aumentava
+                    a rigidez torcional da carroceria e colaborava no trabalho da suspensão e direção.</b>
+                </p>
+                <p>
+                    Seu motor era o B16B, o 1.6 aspirado que ficou conhecido pela maior potência específica
+                    da época, com 185 cv em um bloco de 1.595 cc. O torque era de 16,3 kgfm a 7.500 rpm, sendo
+                    que a potência chegava a 8.200 rpm, uma característica desse motor da Honda. A transmissão
+                    era manual de 5 marchas com diferencial de deslizamento limitado e relação mais curta.
 
-      </div>
-      <div class="content_section floating_element">
-        <div class="content_section_text">
-          <p>
-               <b> O primeiro Civic Type R nasce em 1997, na sexta geração do modelo. Exclusivo
-                para o Japão, era um hatch de 3 portas e chamou a atenção pela  redução de
-                peso conseguida pela Type R, de 1.143 kg para 1.050 kg e por uma importante
-                mudança estrutural. Na produção, a soldagem contínua, não em pontos, aumentava
-                a rigidez torcional da carroceria e colaborava no trabalho da suspensão e direção<b>
-          </p>
-
-          <p>
-                Seu motor era o B16B, o 1.6 aspirado que ficou conhecido pela maior potência específica
-                da época, com 185 cv em um bloco de 1.595 cc. O torque era de 16,3 kgfm a 7.500 rpm, sendo
-                que a potência chegava a 8.200 rpm, uma característica desse motor da Honda. A transmissão
-                era manual de 5 marchas com diferencial de deslizamento limitado e relação mais curta.
-
-                Chegava aos 100 km/h em 6,7 segundos e a velocidade máxima de 225 km/h já chamava a atenção
-                na época. Por dentro, marcou algo que ficou clássico dos Type R: bancos Recaro em vermelho,
-                carpetes vermelhos, acabamentos de portas em vermelho, volante MOMO em couro e manopla de
-                câmbio em titânio. Foram feitas 16.000 unidades até 2000.
-          </p>
-
+                    Chegava aos 100 km/h em 6,7 segundos e a velocidade máxima de 225 km/h já chamava a atenção
+                    na época. Por dentro, marcou algo que ficou clássico dos Type R: bancos Recaro em vermelho,
+                    carpetes vermelhos, acabamentos de portas em vermelho, volante MOMO em couro e manopla de
+                    câmbio em titânio. Foram feitas 16.000 unidades até 2000.
+                </p>
+            </div>
+            <div class="section_header">
+                <div id="changes"></div>
+                Por que o Civic é tão icônico?
+            </div>
+            <div class="content_section_text">
+                <p>
+                    A Honda, por sua vez, inovou o mercado de carros esportivos com o modelo Type-R, trazendo um
+                    modelo de carro totalmente icônico e charmoso com sua aerodinâmica diferenciada. O modelo
+                    hatch de 2 portas, fabricado originalmente no Japão, foi um dos grandes favoritos na comunidade
+                    de rachas noturnos no Japão. O carro tornou-se tão icônico que participou de uma das grandes
+                    franquias de video games, o famoso Need For Speed Underground.
+                </p>
+                <p style="text-align: center;">
+                    Por que a Honda se destacou tanto com o modelo Civic?
+                </p>
+                <ul>
+                    <li>
+                        Qual é a potência máxima do Honda Civic Type R? O Honda Civic Type R
+                        tem uma potência máxima de 185cv/ 136 kW.
+                    </li>
+                    <li>
+                        Qual é o torque máximo do Honda Civic Type R 185 cv? O torque máximo do
+                        Honda Civic Type R 185 cv é de 160 Nm.
+                    </li>
+                    <li>
+                        Qual é o peso anunciado do Honda Civic Type R 185 cv? O Honda Civic Type R
+                        185 cv pesa, segundo o fabricante, 1050 kg (DIN).
+                    </li>
+                    <li>
+                        Qual é a velocidade máxima anunciada pelo fabricante para o Honda Civic Type R 185 cv?
+                        O Honda Civic Type R 185 cv é suposto ter uma velocidade máxima de 235 km/h.
+                    </li>
+                </ul>
+                <center>
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.Wr6F4tz2MVcjzj7a1RNC4wHaE5&pid=Api&P=0&h=180" style="width:244px;height:177px;" />
+                    <img src="https://i.pinimg.com/736x/99/18/6d/99186d8b25dea50a38f2b34bf69dcef4.jpg" style="width:244px;height:177px;" />
+                    <img src="https://i.pinimg.com/736x/95/bb/3b/95bb3ba348c8d65f025641f926e4c314.jpg" style="width:244px;height:177px;" />
+                </center>
+            </div>
         </div>
-        <div class="section_header">
-          <div id="changes"></div>
-                Por quê o Civic é tão icônico?
-        </div>
-        <div class="content_section_text">
-          <p>
-                A honda por sua vez, inovou o mercado de carros esportivos com o modelo Type-R, trazendo um
-                modelo de carros totalmente icônicos e charmosos com sua aerodinamica diferenciada, o modelo
-                Hatch 2 portas fabricado originalmente no Japão! foi um dos grandes modelos amados pela comunidade
-                de rachas noturnos no Japão, o carro chegou a ser tão icônico que participou de uma das grandes
-                Franquias dos Videos Games o famoso Need For Speed Underground.
-          </p>
-          <p>
-             <center>  Por quê a honda diferenciou tanto com o seu modelo Civic? </center>
-          </p>
-          <ul>
-                        <li>
-                           Qual é a potência máxima do Honda Civic Type R? O Honda Civic Type R
-                           tem uma potência máxima de 185cv/ 136 kW.
-                        </li>
-
-                        <li>
-                            Qual é o torque máximo do Honda Civic Type R 185 cv? O torque máximo do
-                            Honda Civic Type R 185 cv é de 160 Nm.
-
-                        </li>
-
-                        <li>
-                           Qual é o peso anunciado do Honda Civic Type R 185 cv? O Honda Civic Type R
-                           185 cv pesa, segundo o fabricante, 1050 kg (DIN).
-                        </li>
-
-                        <li>
-                           Qual é a velocidade máxima anunciada pelo fabricante para o  Honda Civic Civic
-                           Type R 185 cv? O Honda Civic Type R 185 cv é suposto ter uma velocidade máxima
-                           de 235 km/h.
-
-        </ul>
-       <center>
-       <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFRUVFRgXFxcXGBcXFxUYGBYYGBgXFRYYHSggGBolHRcYITEhJSkrLi4uGB8zODMtNygtLisBCgoKDg0OFw8PFS0dFR8rLSstKy0tKy0tKy0rL>
-            style="width:244px;height:177px;"
-        <div>
-            <img src="https://i.pinimg.com/736x/99/18/6d/99186d8b25dea50a38f2b34bf69dcef4.jpg"
-                 style="width:244px;height:177px;"
-        <div>
-                 <img src="https://i.pinimg.com/736x/95/bb/3b/95bb3ba348c8d65f025641f926e4c314.jpg"
-                      style="width:244px;height:177px;"
-        </center>
-        </div>
-        </div>
-        <div class="validator">
-         </div>
-
-  </body>
+        <div class="validator"></div>
+    </div>
+</body>
 </html>
+
